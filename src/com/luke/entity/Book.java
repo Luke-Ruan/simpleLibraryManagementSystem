@@ -16,8 +16,24 @@ public class Book {
         this.stock = stock;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setWriter(String writer) {
+        this.writer = writer;
+    }
+
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getBookName() {
