@@ -53,7 +53,7 @@ public class OperationController {
     
     public AddBookResult addBook(String bookName, String writer, String count) {
         if (bookName == null || writer == null || count == null) {
-            return new AddBookResult(false, false, 0L);
+            return new AddBookResult(false, false, -1L);
         }
         if (CurrentUserUtil.hasPermission(BookPermissionEnums.ADD_BOOK.getValue())) {
             return permissionService.addBook(bookName, writer, count);

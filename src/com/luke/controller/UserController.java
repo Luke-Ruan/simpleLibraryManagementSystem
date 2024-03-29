@@ -2,13 +2,14 @@ package com.luke.controller;
 
 import com.luke.entity.User;
 import com.luke.service.UserService;
+import com.luke.service.impl.SimpleUserService;
 import com.luke.utils.CurrentUserUtil;
 
 public class UserController {
     private UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController() {
+        this.userService = new SimpleUserService();
     }
 
     /**
