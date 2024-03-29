@@ -15,6 +15,11 @@ public class DeleteAction implements ActionMethod {
 
     @Override
     public void action(List<String> args) {
-        operationController.deleteBook(args.get(1), args.get(2));
+        Boolean aBoolean = operationController.deleteBook(args.get(1), args.get(2));
+        if (!aBoolean) {
+            System.out.println("Cannot delete book " + args.get(1) + " because it is currently borrowed.");
+        } else {
+            System.out.println("Book " + args.get(1) + " by " + args.get(2) + " deleted successfully.");
+        }
     }
 }

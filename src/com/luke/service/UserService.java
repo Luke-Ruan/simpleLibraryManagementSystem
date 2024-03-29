@@ -26,4 +26,11 @@ public interface UserService {
      * @return
      */
     boolean verifyUserLogin(String userName, String pw);
+
+    /**
+     * 校验当前角色是否存在
+     * @param type
+     * @return
+     */
+    boolean verifyRole(String type);
 }

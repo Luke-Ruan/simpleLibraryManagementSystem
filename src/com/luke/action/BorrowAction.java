@@ -15,6 +15,11 @@ public class BorrowAction implements ActionMethod {
 
     @Override
     public void action(List<String> args) {
-        operationController.borrowBook(args.get(1), args.get(2));
+        Boolean aBoolean = operationController.borrowBook(args.get(1), args.get(2));
+        if (!aBoolean) {
+            System.out.println("Sorry, book " + args.get(1) + " is not available");
+        } else {
+            System.out.println("Book " + args.get(1) + " successfully borrowed.");
+        }
     }
 }

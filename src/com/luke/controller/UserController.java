@@ -14,13 +14,16 @@ public class UserController {
 
     /**
      * 注册入口
+     * @param type
      * @param userName
      * @param pw
-     * @param type
      * @return
      */
-    public boolean register(String userName, String pw, String type) {
+    public boolean register(String type, String userName, String pw) {
         if (userName == null || pw == null || type == null) {
+            return false;
+        }
+        if (!userService.verifyRole(type)) {
             return false;
         }
         User userByUserNameAndType = userService.getUserByUserName(userName);
