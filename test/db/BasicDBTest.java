@@ -1,7 +1,7 @@
 package db;
 
-import com.luke.db.BasicDB;
-import com.luke.entity.User;
+import com.luke.BasicDB;
+import com.luke.User;
 
 public class BasicDBTest {
     public static void main(String[] args) {
